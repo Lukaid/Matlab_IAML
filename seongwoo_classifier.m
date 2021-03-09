@@ -1,4 +1,4 @@
-function y = seong_classifier(x_1, x_2)
+function y = seongwoo_classifier(x_1, x_2)
 %% point_1 : (4.5, 2.5)
 %% point_2 : (5.4, 3.1)
 %% gradient = 2/3
