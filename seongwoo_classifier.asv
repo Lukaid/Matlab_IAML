@@ -1,0 +1,12 @@
+function y = seong_classifier(x_1, x_2)
+%% point_1 : (4.5, 2.5)
+%% point_2 : (5.4, 3.1)
+%% gradient = 7/9
+%% function : x_2 = 7/9 * x_1
+
+
+if x_2 >= 7/9 * x_1 + 
+    y = 0
+else
+    y = 1    
+end
