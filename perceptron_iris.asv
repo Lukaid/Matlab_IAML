@@ -4,7 +4,7 @@ close all;
 %load iris_data
 load iris_data.mat
 
-X = [x(1:100, 1), x(1:100, 2)]
+X = [x(1:100, 1), x(1:100, 3)]
 
 for i = 1:100;
     if y(i) == 0
@@ -25,7 +25,7 @@ ylabel('Petal lengnth')
 legend('setosa','versicolor')
 
 %Perceptron
-n_iter =  1000; % number of epoch
+n_iter =  10; % number of
 eta = 0.1; % 이게 뭐지? learning rate?
 
 w = [0;0;0] % initial guess
@@ -35,9 +35,16 @@ for i = 1:n_iter
     
     % prediction
     for j = 1:length(X)
-        Yhat(j, 1) = step_f(w'*[1;X(j, :)']);
+        if w'*[1;X(j, :)'] >= 1
+            Yhat(j, 1) = 1;
+        else 
+            Yhat(j, 1) = -1;
+        end   
+    end
+    
     % update
-        w = w + eta*(Y(j, 1) - Yhat(j, 1))*[1;X(j, :)'];
+    for j = 1:length(X)
+        w = w + eta*(Y(j, 1) - Yhat(j, 1))*[1;X(j, :)']
     end 
 end
 
