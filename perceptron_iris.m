@@ -50,5 +50,7 @@ end
 figure(1)
 plot(x1, x2)
 
+w
+
 
 
