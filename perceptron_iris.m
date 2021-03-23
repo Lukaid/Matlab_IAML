@@ -28,7 +28,7 @@ legend('setosa','versicolor')
 n_iter =  1000; % number of epoch
 eta = 0.1; % 이게 뭐지? learning rate?
 
-w = [0;0;0] % initial guess
+w = [3;3;3] % initial guess
 
 
 for i = 1:n_iter

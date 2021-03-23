@@ -18,21 +18,17 @@ ylabel('Sepal width')
 %Perceptron
 n_iter=1000; %# of epoch
 eta=0.1; %learning rate
-
 w=[3;3;3]; %initial value for w
 
 for i=1:n_iter %# of epoch
-    
     for j=1:length(X)
         
         %prediction
         Yhat(j,1)=step_f(w'*[1;X(j,:)']);
         
         %update
-        w=w+eta*(Y(j,1)-Yhat(j,1))*[1;X(j,:)'];       
-
+        w=w+eta*(Y(j,1)-Yhat(j,1))*[1;X(j,:)'];
     end    
-   
 end
 
 x1=4:0.1:7;
@@ -42,9 +38,3 @@ end
 
 figure(1)
 plot(x1,x2)
-
-
-
-
-
-
